@@ -1,8 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import { useCookies } from "react-cookie";
+// import { useCookies } from "react-cookie";
+// import { useState } from "react-cookie";
+
 import CRUD from "./CRUD";
+import { useCookies } from "react-cookie";
 
 const SIGN = () => {
   const [cookies, setCookies] = useCookies("access_token");
@@ -62,7 +65,8 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const [setCookies] = useCookies(["access_token"]);
+  // const [cookies, setCookies] = useCookies(["access_token"]);
+  const [co, setCookies] = useCookies(["access_token"]);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -80,9 +84,10 @@ const Login = () => {
       resp.data.messege === "User dose not exists"
     ) {
       window.location.reload(false);
-      console.log(resp.data);
+      // console.log(resp.data);
     } else {
       setCookies("access_token", resp.data.token);
+
       window.localStorage.setItem("userID", resp.data.adminId);
       window.location.reload(true);
     }
