@@ -10,11 +10,7 @@ port = 8000;
 
 const app = express();
 app.use(express.json());
-app.use(
-  cors({
-    origin: ["http://localhost:3000", "https://signin-mern.netlify.app"],
-  })
-);
+app.use(cors());
 
 mongoose.connect(
   "mongodb+srv://osamamagdy0:MERN12345@cluster0.k1qugs2.mongodb.net/todo-MERN"
