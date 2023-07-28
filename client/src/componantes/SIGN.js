@@ -66,8 +66,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   // const [cookies, setCookies] = useCookies(["access_token"]);
-  const [co, setCookies] = useCookies(["access_token"]);
-
+  const [cookies, setCookies] = useCookies(["access_token"]);
+  console.log(cookies);
   const onSubmit = async (e) => {
     e.preventDefault();
     const resp = await axios.post("http://localhost:8000/login", {
