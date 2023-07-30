@@ -52,6 +52,6 @@ app.post("/login", async (req, res) => {
   return res.json({ token, adminId: login._id });
 });
 
-app.listen(port, () => {
+app.listen(port || "https://to-do-list-mern-fgwk.onrender.com", () => {
   console.log(`Serveris working http://localhost:${port}`);
 });
