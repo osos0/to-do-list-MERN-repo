@@ -8,8 +8,8 @@ const jwt = require("jsonwebtoken");
 Database =
   "mongodb+srv://osamamagdy0:MERN12345@cluster0.k1qugs2.mongodb.net/todo-MERN";
 
-port = 8000;
-port2 = "https://to-do-list-mern-fgwk.onrender.com";
+// port = 8000;
+// port2 = "https://to-do-list-mern-fgwk.onrender.com";
 
 const app = express();
 app.use(express.json());
@@ -53,6 +53,6 @@ app.post("/login", async (req, res) => {
   return res.json({ token, adminId: login._id });
 });
 
-app.listen(port2 || port, () => {
-  console.log(`Serveris working http://localhost:${port2}`);
+app.listen("https://to-do-list-mern-fgwk.onrender.com", () => {
+  console.log(`Serveris working http://localhost:server2`);
 });
