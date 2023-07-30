@@ -53,6 +53,8 @@ app.post("/login", async (req, res) => {
   return res.json({ token, adminId: login._id });
 });
 
-app.listen("https://to-do-list-mern-fgwk.onrender.com", () => {
-  console.log(`Serveris working http://localhost:server2`);
+app.listen(8000, () => {
+  console.log(
+    `Serveris working http://localhost:"https://to-do-list-mern-fgwk.onrender.com"`
+  );
 });
