@@ -40,7 +40,7 @@ const Register = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8000/register", {
+    await axios.post("https://to-do-list-mern-fgwk.onrender.com/register", {
       username: username,
       password: password,
     });
@@ -70,10 +70,13 @@ const Login = () => {
   console.log(cookies);
   const onSubmit = async (e) => {
     e.preventDefault();
-    const resp = await axios.post("http://localhost:8000/login", {
-      username: username,
-      password: password,
-    });
+    const resp = await axios.post(
+      "https://to-do-list-mern-fgwk.onrender.com/login",
+      {
+        username: username,
+        password: password,
+      }
+    );
 
     // setCookies("access_token", resp.data.token);
     // window.localStorage.setItem("userID", resp.data.adminId);
