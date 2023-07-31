@@ -11,7 +11,7 @@ const Proudect = (e) => {
   // const [Price, setPrice] = useState(``);
 
   useEffect(() => {
-    fetch("http://localhost:8000/allproducts")
+    fetch("https://to-do-list-mern-fgwk.onrender.com/allproducts")
       .then((data) => data.json())
       .then((res) => setfetchdata(res.objs));
   }, []);
@@ -19,7 +19,7 @@ const Proudect = (e) => {
   // const handelEdit = (ed) => {
   //   // console.log(del);
   //   axios
-  //     .put(`http://localhost:8000/allproducts/${ed}`, {
+  //     .put(`https://to-do-list-mern-fgwk.onrender.com/allproducts/${ed}`, {
   //       car: Car,
   //       color: Color,
   //       price: Price,
