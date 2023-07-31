@@ -8,13 +8,13 @@ const Allproducts = () => {
   // const [Productdata, setProductdata] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/allproducts")
+    fetch("https://to-do-list-mern-fgwk.onrender.com/allproducts")
       .then((data) => data.json())
       .then((res) => setfetchdata(res.objs));
   }, []);
 
   const handelDelete = (del) => {
-    fetch(`http://localhost:8000/allproducts/${del}`, {
+    fetch(`https://to-do-list-mern-fgwk.onrender.com/allproducts/${del}`, {
       method: "DELETE",
     })
       .then((data) => data.json())
